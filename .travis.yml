@@ -1,0 +1,30 @@
+language: bash
+env:
+  matrix:
+  - OS=debian DIST=jessie ARCH=armel
+  - OS=debian DIST=jessie ARCH=armhf
+  global:
+  - DEPLOY_HOST=ev3dev-docker-docker.bintray.io
+  - secure: M36TDkOtXtdsRvfFn82DWi2XHOHSO/fhan8E0+GYb/NH40wocLx5acwxXA+ZRqT01R+Ppmv3r1vFUbKpgrFL732PpaLWplqO/7KoTC+nuV0nDUVZi3/x0lw8rLJcwx3BIVxmB6yrICpF8bMrS+BFYeTzUxv/dbLr8ZIzbiFhhtuQYDCPGPJhu/bRxN0yMPGh/+VgqLdK0vxhWqMORitfxM/39T/QsXN16nbljA2v8+E7ISBqIMOZZFTbdryxFWjK5rkHIa998uVd/xS3HCH7trchOKV6GdPOZGHmOzdIjPjzr0QV4HyV+MuhygrFai/z2jvJmYW27wQckY4ylrsRCg1B8+OPf/lCSAxUNBqeRJ5isJrC2wykZDMuMaJ24ypgfobnZuGoICEQ1XtZhrIPMRqEYmi4Nrsdu9yjPZ0OgZ5pNFI4dmYpf2duBEBrYo3SwiSC8OMdpVwJ/uO+E9FuZdM+rEAKPeKFq2BjyqWMQWs4WrwNE5yFwmv4p5wkvhSaDY5z5wZyRHdZ6INp3EDqgBEQZuJQppXx1hJUwlfPwIzLdfXmraqGcr7RhDbD74CfDfZnb/vfF+eLUleXGQ+wQc5XqzAvVQVqNoF3w1iqi6kp9SS8XuImDcjdenqpP7SPPxQrcbftFfZdmLU+oUunOrDLEJUv4K1imCWNyhjJsjg=
+  - secure: mn/4RYJ211PODA/eBx0fVc6PmpZZiLCxY22vbbN9AVZQSFKuntbF8TPef7J+IW6ujHxRcZxHi7K4DmYUcX+s6KVlRUDHB5AYyxtWP0HGXW4xfh2mH2ZVc0MjA4ZHN0EbtHHdV4q4nIv8XvYyzCT4BfqxWgL1Qm/OS5vxO6tnFntYp8PFEslAkPWrGDBkeeG37+BZjRvh4JyUHLw9THg6NE7+pIF16xPFb0LC9qJ81sM92/L7ZZJ/ghqhokd8yyx7ln1yUBOt0WgENYkkAr1kIaZ35RNbgZngYiqRzndCyximc6C2BjqGP6dbzGVfPc+p/3lbPxsDVS6TJllbNlyrykMi0CrUK+0JdnMQJ9lBIi6UXd/R+ZbElpch5HH3tJHU4Xec45tyJkwsa8Jjh1A7QmST12EKaq4Tb9BQruiwaEiteCH2yJMngPZoiqTZMqt2JJ4kQCmn4CXMWlE0Y17kjkO2rfCqRYrB2n9ptrDw1FO39PweuXj7bnBFOoZW1O10XjYmXcpJW61ZM6sbutrC+XGcwCdQFc/xntwX/xDPIUrshhNczI8JPmW03qjfeVC+/WAjLx/caWjYRpGfWPhgI5aPmtj86seMSebRvTahDHqFe9ry9ZfzzDytD1R7kVGfWpPRlkYdrwYoVN9hBlB/KFk35ZsrmYbaP435ObeEHNM=
+sudo: required
+dist: trusty
+services: docker
+install:
+- sudo apt-get update
+- sudo apt-get install --yes qemu-user-static
+before_script:
+- docker --version
+script:
+- docker build -t $OS-$DIST-$ARCH-cross
+  -f ev3dev-$DIST/$OS-$DIST-$ARCH.dockerfile
+  ev3dev-$DIST
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    export TAG=$(date --iso-8601);
+    docker login -u dlech -p $API_KEY -e $EMAIL $DEPLOY_HOST;
+    docker tag $OS-$DIST-$ARCH-cross $DEPLOY_HOST/$OS-$DIST-$ARCH-cross;
+    docker push $DEPLOY_HOST/$OS-$DIST-$ARCH-cross;
+    docker tag $OS-$DIST-$ARCH-cross $DEPLOY_HOST/$OS-$DIST-$ARCH-cross:$TAG;
+    docker push $DEPLOY_HOST/$OS-$DIST-$ARCH-cross:$TAG;
+  fi

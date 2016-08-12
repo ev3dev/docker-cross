@@ -4,9 +4,9 @@ env:
   - OS=debian DIST=jessie ARCH=armel
   - OS=debian DIST=jessie ARCH=armhf
   global:
-  - DEPLOY_HOST=ev3dev-docker-docker.bintray.io
-  - secure: M36TDkOtXtdsRvfFn82DWi2XHOHSO/fhan8E0+GYb/NH40wocLx5acwxXA+ZRqT01R+Ppmv3r1vFUbKpgrFL732PpaLWplqO/7KoTC+nuV0nDUVZi3/x0lw8rLJcwx3BIVxmB6yrICpF8bMrS+BFYeTzUxv/dbLr8ZIzbiFhhtuQYDCPGPJhu/bRxN0yMPGh/+VgqLdK0vxhWqMORitfxM/39T/QsXN16nbljA2v8+E7ISBqIMOZZFTbdryxFWjK5rkHIa998uVd/xS3HCH7trchOKV6GdPOZGHmOzdIjPjzr0QV4HyV+MuhygrFai/z2jvJmYW27wQckY4ylrsRCg1B8+OPf/lCSAxUNBqeRJ5isJrC2wykZDMuMaJ24ypgfobnZuGoICEQ1XtZhrIPMRqEYmi4Nrsdu9yjPZ0OgZ5pNFI4dmYpf2duBEBrYo3SwiSC8OMdpVwJ/uO+E9FuZdM+rEAKPeKFq2BjyqWMQWs4WrwNE5yFwmv4p5wkvhSaDY5z5wZyRHdZ6INp3EDqgBEQZuJQppXx1hJUwlfPwIzLdfXmraqGcr7RhDbD74CfDfZnb/vfF+eLUleXGQ+wQc5XqzAvVQVqNoF3w1iqi6kp9SS8XuImDcjdenqpP7SPPxQrcbftFfZdmLU+oUunOrDLEJUv4K1imCWNyhjJsjg=
-  - secure: mn/4RYJ211PODA/eBx0fVc6PmpZZiLCxY22vbbN9AVZQSFKuntbF8TPef7J+IW6ujHxRcZxHi7K4DmYUcX+s6KVlRUDHB5AYyxtWP0HGXW4xfh2mH2ZVc0MjA4ZHN0EbtHHdV4q4nIv8XvYyzCT4BfqxWgL1Qm/OS5vxO6tnFntYp8PFEslAkPWrGDBkeeG37+BZjRvh4JyUHLw9THg6NE7+pIF16xPFb0LC9qJ81sM92/L7ZZJ/ghqhokd8yyx7ln1yUBOt0WgENYkkAr1kIaZ35RNbgZngYiqRzndCyximc6C2BjqGP6dbzGVfPc+p/3lbPxsDVS6TJllbNlyrykMi0CrUK+0JdnMQJ9lBIi6UXd/R+ZbElpch5HH3tJHU4Xec45tyJkwsa8Jjh1A7QmST12EKaq4Tb9BQruiwaEiteCH2yJMngPZoiqTZMqt2JJ4kQCmn4CXMWlE0Y17kjkO2rfCqRYrB2n9ptrDw1FO39PweuXj7bnBFOoZW1O10XjYmXcpJW61ZM6sbutrC+XGcwCdQFc/xntwX/xDPIUrshhNczI8JPmW03qjfeVC+/WAjLx/caWjYRpGfWPhgI5aPmtj86seMSebRvTahDHqFe9ry9ZfzzDytD1R7kVGfWpPRlkYdrwYoVN9hBlB/KFk35ZsrmYbaP435ObeEHNM=
+  - secure: uB8WbkN+DidLR55voa/Z+9mrd9j2jXABvTh5BeznZbYcuHsJKpslD2rxzEXb57h+0axctMJBvABxtddWoR6oCuTz3rNg2wepFxR+OS4A5CZ3hgcQzT9zlvmEOCF+QAdfoJdB6yZae8Xwfvh0zOzvzR8n4sMwJ/wM/r5k707W0L3JmSN7ls+8mbgoNx/lfcpuY6Mvxm4CXak+vVug11r0VIgL9fKya51FB8OTyAGQpoQyZabgeaHZaiVRhoR89waa2GfnhvoUT+P7bcWBl9SjnTH32GMmU/I/3fpDi9Zb7mDW65AG0DuRF00JoJLVyiM7wUMz+Cc2kamsSDtZr6tqqSyK5s/o4Xto33Z3Uj1TE2UN9YSOcFl02YtIL78pfv8wIZB7bXtyt/0hdZXxqCeIYVvq2pqe0fI+Q6PaZBd33TvWHYRYRysetFjMJZ+eWVOGWnfHmaH9amQKbx/1sCu7g/w3NlN5aLwz5n2TRFO/LC3pXMNqt+ZWwMmWSJc/9l9XF+wEgEwtfThYQkE73nyntPnSd5KnsN3jbNbpz3muHb+aV3WdjJPu69eykSmH8GVZrB3pb8LfXGyPDkfwliAQP//WwbGm+XyiIu2lUYXSz5YVgjycQp8QyGdy+8MF8HpnswwB1atRYpEoQCwak6h7NQzOZn3TOK5GNluYsxkX5A0=
+  - secure: ST/UvuG5Plds4aorMvBjQKvDGeyOPeoI9c6Vpn2Y3bVGzcJcviTE3vIY8BEWSz2uU+V2DLjN1d7by7QMYInNs1+EHWpZBnhEJgVPdVZJxy2sp5oQYlq13iBQiVje2BIHZlYuMirxrM4nyOoy9Dv+6mrWHde2iZjeqS+j/CplkTLJoiUxj+OWhDJmWGbUBU65QgbyKNubeQxKRB2f+AwE2ExRYXyPFkSmZuA94a4+2N5B8Xl0KhL3PIJflcERQWbHITy0lIHh0DLaCmBo0qKlSC2/ycxPJ03tRc7YhlGSjiWQt66k5Z2pYeCAekYdyzpGZPH/JCWFJH0aDnFpoAQN3FmN8xJdCIq14ovSKNVANUOK+IO5GLJyfwCEzEdSHeMB/1X6uUFrjLR/R8dSct0XwerfiD09sVDF3pvffBGNc2qv9V5azpqGp1TgoE2UefXiWuvy9mSJ6ttwKpZfK8vLNRLUzAe8/1Wfpv0Q+2PDrVKaJsX6nTJdhJe5dwSuzQzuqd3XUZs2BsI7G3A0OJ25yWS4d2c8UpOT1aYl+BjgCN1FDHolNgdBa0jYCdBQto+LOK8pDbGuchLf8B9guzyavl1aqJVKmLfbKl7kbac/FKrvDQ71OgbH8gcLvakRP1IlEyRdz4oDguC7J7gSUvZFK9NRm/jpfprmdFEZO+DVILs=
+  - secure: KdnQcQotUi03yRBco4NvFCfrr/BwCteJmyRkjyfqjJpqKTKlRUYYiCaV5RVAYNCd9mfL0a/suMt7/tDnCkgPS1VsaDksXBD6LyjUH3job0h2bEVyzxbAe3EX+r+/XNMwb2IA0103prgSiRO4xf3orwuKzwGxufcyqG47DQNGclMhTeehru3GpExtFwb8ClWqkIPuMgScqdfaJyJiyZkhAy7vR+8mdnyyvQnql/FvusX+bysrEzs8KOy2TuwtKvzNrFx/uvWl9rPnrrRIIpzo/d7nJ903/iJNLshb3IJttej+CSGn5SKgxyLmQj/qUI4ppRLL1nnsoA0Vsh5RtpsRc4rzbmdpV0jnw8pYPzF3QI8Jz0aRUS6XoCO1Osse9sEsVILj1KNwia6VBo7ClppxQdaxsznv5X0Tn5oYwGCC/Eprjz1Mai4pw9NBppos8QSu9zXRPMaq6E9u9AAxVhp1PBKw2nanjjkeGWPG5DQKDlHUJiNG1nFP9Oc9hL9ZP7iuchK8d666JxBrD69I47rumC8PD8AZCHP9Kbn37AAjHEezcjOmLT7U/X7NG8yNfO4IRvvKJ2ZZ2vO/GMtRgEFwhHgzKdlQpvCOq/6JcNLqMK22sjcFdm8RhSNaGtgW3+Wdfiy8umuIgp0NFHQdJaoPUE7HPwqk6aNJzvCZmsqSJ7M=
 sudo: required
 dist: trusty
 services: docker
@@ -16,15 +16,16 @@ install:
 before_script:
 - docker --version
 script:
-- docker build -t $OS-$DIST-$ARCH-cross
+- docker build
+  -t ev3dev/$OS-$DIST-$ARCH-cross
   -f ev3dev-$DIST/$OS-$DIST-$ARCH.dockerfile
   ev3dev-$DIST
 after_success:
-- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+- if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ];
+  then
     export TAG=$(date --iso-8601);
-    docker login -u dlech -p $API_KEY -e $EMAIL $DEPLOY_HOST;
-    docker tag $OS-$DIST-$ARCH-cross $DEPLOY_HOST/$OS-$DIST-$ARCH-cross;
-    docker push $DEPLOY_HOST/$OS-$DIST-$ARCH-cross;
-    docker tag $OS-$DIST-$ARCH-cross $DEPLOY_HOST/$OS-$DIST-$ARCH-cross:$TAG;
-    docker push $DEPLOY_HOST/$OS-$DIST-$ARCH-cross:$TAG;
+    docker login -u $USER -p $PASSWORD -e $EMAIL;
+    docker push ev3dev/$OS-$DIST-$ARCH-cross;
+    docker tag $OS-$DIST-$ARCH-cross ev3dev/$OS-$DIST-$ARCH-cross:$TAG;
+    docker push ev3dev/$OS-$DIST-$ARCH-cross:$TAG;
   fi

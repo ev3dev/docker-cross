@@ -1,4 +1,4 @@
-FROM ev3dev-docker-docker.bintray.io/debian-jessie-armel
+FROM ev3dev/debian-jessie-armel-qemu-minbase
 
 # setup repositories and install required packages
 COPY apt.sources.list.debian /etc/apt/sources.list

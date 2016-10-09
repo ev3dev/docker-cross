@@ -3,7 +3,7 @@ FROM ev3dev/debian-jessie-armhf-qemu-minbase
 # setup repositories and install required packages
 COPY apt.sources.list.debian /etc/apt/sources.list
 RUN dpkg --add-architecture amd64 && \
-    apt-key adv --keyserver pgp.mit.edu --recv-keys 2B210565 && \
+    apt-key adv --keyserver pgp.mit.edu --recv-keys D57D95AF93178A7C && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --yes xz-utils \
         libc6:amd64 libz1:amd64 libncurses5:amd64 libpython2.7:amd64 \

@@ -13,10 +13,12 @@ RUN dpkg --add-architecture armel && \
         cmake \
         crossbuild-essential-armel \
         crossbuild-essential-armhf \
+        gdb \
         less \
         man-db \
         nano \
         pkg-config \
+        qemu-user-static \
         sudo \
         tree \
         valac \

@@ -6,3 +6,6 @@ deb-src http://security.debian.org/ jessie/updates main contrib non-free
 
 deb http://archive.ev3dev.org/debian jessie main
 deb-src http://archive.ev3dev.org/debian jessie main
+
+deb http://emdebian.org/tools/debian/ jessie main
+deb-src http://emdebian.org/tools/debian/ jessie main

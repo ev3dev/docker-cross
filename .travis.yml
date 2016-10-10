@@ -1,18 +1,11 @@
 language: bash
-env:
-  matrix:
-  - OS=debian DIST=jessie ARCH=armel
-  - OS=debian DIST=jessie ARCH=armhf
 sudo: required
 dist: trusty
 services: docker
-install:
-- sudo apt-get update
-- sudo apt-get install --yes qemu-user-static
 before_script:
 - docker --version
 script:
 - docker build
-  -t ev3dev/$OS-$DIST-$ARCH-cross
-  -f ev3dev-$DIST/$OS-$DIST-$ARCH.dockerfile
-  ev3dev-$DIST
+  -t ev3dev/debian-jessie-cross
+  -f ev3dev-jessie/debian-jessie-cross.dockerfile
+  ev3dev-jessie

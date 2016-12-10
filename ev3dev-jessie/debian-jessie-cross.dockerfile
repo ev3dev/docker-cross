@@ -21,7 +21,6 @@ RUN dpkg --add-architecture armel && \
         qemu-user-static \
         sudo \
         tree \
-        valac \
         vim \
         wget \
         xz-utils

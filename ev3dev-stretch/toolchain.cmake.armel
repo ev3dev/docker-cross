@@ -1,0 +1,9 @@
+# https://wiki.linaro.org/WorkingGroups/ToolChain/FAQ
+# http://stackoverflow.com/a/11536633/1976323
+
+set (CMAKE_C_FLAGS "-marm -march=armv4t -mfloat-abi=soft" CACHE STRING "" FORCE)
+set (CMAKE_C_COMPILER /opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-gcc)
+set (CMAKE_CXX_FLAGS "-marm -march=armv4t -mfloat-abi=soft" CACHE STRING "" FORCE)
+set (CMAKE_CXX_COMPILER /opt/gcc-linaro-arm-linux-gnueabihf-4.8-2014.04_linux/bin/arm-linux-gnueabihf-g++)
+
+set (CMAKE_SYSROOT /)

@@ -11,9 +11,10 @@ RUN dpkg --add-architecture amd64 && \
 
 # install the cross-compiler toolchain
 RUN cd /opt && \
-    wget http://releases.linaro.org/components/toolchain/binaries/6.3-2017.02/arm-linux-gnueabi/gcc-linaro-6.3.1-2017.02-x86_64_arm-linux-gnueabi.tar.xz && \
-    tar xf gcc-linaro-6.3.1-2017.02-x86_64_arm-linux-gnueabi.tar.xz && \
-    rm gcc-linaro-6.3.1-2017.02-x86_64_arm-linux-gnueabi.tar.xz
+    wget https://github.com/ev3dev/ev3dev-crosstool-ng/releases/download/gcc-ev3dev-6.3.0-2017.10/gcc-ev3dev-6.3.0-2017.10-x86_64_arm-ev3-linux-gnueabi.tar.gz && \
+    tar xf gcc-ev3dev-6.3.0-2017.10-x86_64_arm-ev3-linux-gnueabi.tar.gz && \
+    rm gcc-ev3dev-6.3.0-2017.10-x86_64_arm-ev3-linux-gnueabi.tar.gz && \
+    ln -s gcc-ev3dev-6.3.0-2017.10-x86_64_arm-ev3-linux-gnueabi arm-ev3-linux-gnueabi
 
 # setup a new user
 COPY compiler.sudoers /etc/sudoers.d/compiler

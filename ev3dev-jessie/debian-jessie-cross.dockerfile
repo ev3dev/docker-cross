@@ -13,7 +13,7 @@ RUN dpkg --add-architecture armel && \
         cmake \
         crossbuild-essential-armel \
         crossbuild-essential-armhf \
-        gdb \
+        gdb-multiarch \
         less \
         man-db \
         nano \

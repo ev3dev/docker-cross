@@ -1,15 +1,15 @@
 language: bash
 sudo: required
-dist: trusty
+dist: xenial
 services: docker
 before_script:
 - docker --version
 script:
 - docker build
-  -t ev3dev/debian-jessie-cross
-  -f ev3dev-jessie/debian-jessie-cross.dockerfile
-  ev3dev-jessie
-- docker build
   -t ev3dev/debian-stretch-cross
   -f ev3dev-stretch/debian-stretch-cross.dockerfile
   ev3dev-stretch
+- docker build
+  -t ev3dev/debian-buster-cross
+  -f ev3dev-buster/debian-buster-cross.dockerfile
+  ev3dev-buster

@@ -12,6 +12,9 @@ You can get the images by running one of the following:
     docker pull ev3dev/debian-stretch-cross
     docker pull ev3dev/debian-stretch-armel-cross
     docker pull ev3dev/debian-stretch-armhf-cross
+    docker pull ev3dev/debian-buster-cross
+    docker pull ev3dev/debian-buster-armel-cross
+    docker pull ev3dev/debian-buster-armhf-cross
 
 The `debian-<dist>-cross` images have an amd64 root file system and cross
 compilers for armel and armhf. These images can be used to compile anything

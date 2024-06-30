@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian/eol:jessie
 
 # setup repositories and install required packages
 COPY apt.sources.list.debian /etc/apt/sources.list

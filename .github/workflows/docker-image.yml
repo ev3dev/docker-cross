@@ -1,0 +1,26 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build ev3dev-stretch
+      run: >
+        docker build
+        -t ev3dev/debian-stretch-cross
+        -f ev3dev-stretch/debian-stretch-cross.dockerfile
+        ev3dev-stretch
+    - name: Build ev3dev-buster
+      run: >
+        docker build
+        -t ev3dev/debian-buster-cross
+        -f ev3dev-buster/debian-buster-cross.dockerfile
+        ev3dev-buster

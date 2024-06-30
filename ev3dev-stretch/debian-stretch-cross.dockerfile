@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian/eol:stretch
 
 # setup repositories and install required packages
 COPY apt.sources.list.debian /etc/apt/sources.list
